@@ -1,5 +1,3 @@
-import React from "react";
-
 function InputComponent(){
 
     function handleChange(e) {
@@ -27,8 +25,18 @@ function InputComponent(){
         let years = Math.round(flatYear)
         let months = years*12
         let days = Math.floor(flatYear*365)
-        let weeks = days/7
-        console.log(weeks)
+        let weeks = Math.floor(days/7)
+        let hours = value.getHours()
+
+        // BINDING AND APPENDING VALUES
+        document.querySelector(".age").innerHTML = years
+        document.querySelector(".day_value").innerHTML = Math.round(days/355)
+        document.querySelector(".days").innerHTML = days
+        document.querySelector(".weeks").innerHTML = weeks
+        document.querySelector(".years").innerHTML = years
+        document.querySelector(".months").innerHTML = months
+
+        console.log(hours)
     }
 
     return (
