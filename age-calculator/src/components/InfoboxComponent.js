@@ -6,14 +6,14 @@ function InfoboxComponent() {
             <div className="box details">
                 <p className="box_title">Age</p>
                 <div className="age_info">
-                    <span className="age">11</span>
+                    <span className="age">0</span>
                     <span className="value">Years</span>
                 </div>
                 <div className="interval">
-                    <span className="month_value">1</span>
+                    <span className="month_value">0</span>
                     <span className="month_text">month</span>
                     <span>|</span>
-                    <span className="day_value">26</span>
+                    <span className="day_value">0</span>
                     <span className="day_text">days</span>
                 </div>
             </div>
@@ -23,10 +23,10 @@ function InfoboxComponent() {
                 <img src={cakeIcon} alt="cake" />
                 <p className="day">Tuesday</p>
                 <div className="interval">
-                    <span className="month_value_nex">10</span>
+                    <span className="month_value_nex">0</span>
                     <span className="month_text_next">months</span>
                     <span>|</span>
-                    <span className="day_value_next">4</span>
+                    <span className="day_value_next">0</span>
                     <span className="day_text_next">days</span>
                 </div>
             </div>
@@ -37,33 +37,33 @@ function InfoboxComponent() {
                     <div className="col">
                         <div>
                             <p className="title">Years</p>
-                            <p className="years">11</p>
+                            <p className="years">0</p>
                         </div>
                         <div>
                             <p className="title">Days</p>
-                            <p className="days">4075</p>
+                            <p className="days">0</p>
                         </div>
                     </div>
 
                     <div className="col">
                         <div>
                             <p className="title">Months</p>
-                            <p className="months">133</p>
+                            <p className="months">0</p>
                         </div>
                         <div>
                             <p className="title">Hours</p>
-                            <p className="hours">97800</p>
+                            <p className="hours">0</p>
                         </div>
                     </div>
 
                     <div className="col">
                         <div>
                             <p className="title">Weeks</p>
-                            <p className="weeks">582</p>
+                            <p className="weeks">0</p>
                         </div>
                         <div>
                             <p className="title">Minutes</p>
-                            <p className="minutes">5868000</p>
+                            <p className="minutes">0</p>
                         </div>
                     </div>
                 </div>
