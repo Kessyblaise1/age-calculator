@@ -12,8 +12,7 @@ body{
   background-position: right;
 }
 
-#root,
-.main_container{
+#root{
   width: 100%;
   height: 100%;
 }
@@ -52,8 +51,15 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-left: 4rem;
-  width: 40%;
+  width: 95%;
+  max-width: 600px;
+  height: 100%;
+}
+
+@media screen and (min-width: 780px) {
+  .main_container{
+    margin-left: 4rem;
+  }
 }
 
 .info_box{

@@ -1,4 +1,5 @@
 import cakeIcon from '../image/cakeIcon.png';
+import InputComponent from './InputComponent';
 
 function InfoboxComponent() {
     return(

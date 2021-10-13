@@ -1,17 +1,34 @@
 import React from "react";
 
 function InputComponent(){
-    const today = new Date()
-    // let year = today.getFullYear();
-    
 
     function handleChange(e) {
         let options = {year: 'numeric', month: 'long', day: 'numeric'};
         let value = new Date(e.target.value);
-        let DOB = value.toLocaleDateString('en-US', options);
+        let DOB = value.toLocaleDateString('en-US', options)
 
-        let chosenDate = document.getElementById('choice');
-        chosenDate.innerHTML = DOB;
+        document.getElementById('choice').innerHTML = DOB
+
+        let milisecondsDOB = Date.parse(DOB)
+        let milisecondsNow = Date.now()
+
+        const ageInMiliseconds = (milisecondsNow - milisecondsDOB);
+        let miliseconds = ageInMiliseconds
+        const second = 1000,
+            minute = second*60,
+            hour = minute*60,
+            day = hour*24,
+            month = day*30,
+            year = day*365;
+
+
+        // CALCULATIONS
+        let flatYear = miliseconds/year
+        let years = Math.round(flatYear)
+        let months = years*12
+        let days = Math.floor(flatYear*365)
+        let weeks = days/7
+        console.log(weeks)
     }
 
     return (
