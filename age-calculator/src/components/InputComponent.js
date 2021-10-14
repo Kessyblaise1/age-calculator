@@ -26,7 +26,7 @@ function InputComponent(){
         let months = years*12
         let days = Math.floor(flatYear*365)
         let weeks = Math.floor(days/7)
-        let hours = value.getHours()
+        let hours = Math.floor(miliseconds/hour)
 
         // BINDING AND APPENDING VALUES
         document.querySelector(".age").innerHTML = years
@@ -36,7 +36,7 @@ function InputComponent(){
         document.querySelector(".years").innerHTML = years
         document.querySelector(".months").innerHTML = months
 
-        console.log(hours)
+        console.log(days)
     }
 
     return (
