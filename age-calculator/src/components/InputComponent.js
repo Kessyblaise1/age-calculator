@@ -28,7 +28,15 @@ function InputComponent(){
         let weeks = Math.floor(days/7)
         let hours = Math.floor(miliseconds/hour)
         let minutes = Math.floor(miliseconds/minute)
+        
+        // NEXT BIRTHDAY CALCULATIONS
+        let birthDate = value.getDate()
+        let birthMonth = value.getMonth()
         let rN = new Date()
+        let nextYear = rN.getFullYear()+1
+
+        let nextBirthDay = new Date(nextYear, birthMonth, birthDate)
+        console.log(nextBirthDay)
 
         // BINDING AND APPENDING VALUES
         document.querySelector(".age").innerHTML = years
@@ -41,20 +49,7 @@ function InputComponent(){
         document.querySelector(".minutes").innerHTML = minutes
 
 
-        console.log(
-            `
-                flatYear is - ${flatYear}
-                years is - ${year}
-                month is - ${month}
-                day is - ${day}
-                hour is - ${hour}
-                minute is - ${minute}
-                second is - ${second}
-                right now - ${rN}
-                miliseconds now - ${milisecondsNow}
-                miliseconds DOB - ${milisecondsDOB}
-            `
-        )
+        
     }
 
     return (
