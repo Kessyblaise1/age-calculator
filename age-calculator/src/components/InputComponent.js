@@ -20,7 +20,7 @@ function InputComponent(){
             year = day*365;
 
 
-        // CALCULATIONS
+        // CURRENT BIRTHDAY CALCULATIONS
         let flatYear = miliseconds/year
         let years = Math.round(flatYear)
         let months = years*12
@@ -34,9 +34,11 @@ function InputComponent(){
         let birthMonth = value.getMonth()
         let rN = new Date()
         let nextYear = rN.getFullYear()+1
-
+        
         let nextBirthDay = new Date(nextYear, birthMonth, birthDate)
-        console.log(nextBirthDay)
+        let chosenDay = nextBirthDay.getDay()
+        let weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednessday', 'Thursday', 'Friday', 'Saturday']
+        console.log(weekDays[chosenDay])
 
         // BINDING AND APPENDING VALUES
         document.querySelector(".age").innerHTML = years
@@ -47,6 +49,7 @@ function InputComponent(){
         document.querySelector(".months").innerHTML = months
         document.querySelector(".years").innerHTML = years
         document.querySelector(".minutes").innerHTML = minutes
+        document.querySelector(".day").innerHTML = weekDays[chosenDay]
 
 
         
